@@ -215,3 +215,28 @@ SUM_PATTERNS = [
     "display total {field}",
     "give me sum of {field}"
 ]
+
+# ==========================================================
+# Multi Condition Templates
+# ==========================================================
+
+MULTI_CONDITION_PATTERNS = [
+
+    "{verb} devices that are {status} with battery above {battery}",
+
+    "{verb} {status} devices having battery greater than {battery}",
+
+    "find devices that are {status} and battery above {battery}",
+
+    "show devices with status {status} and battery over {battery}",
+
+    "list {status} devices with battery higher than {battery}",
+
+    "{verb} sensors in room {room} with humidity above {humidity}",
+
+    "find sensors in room {room} having humidity greater than {humidity}",
+
+    "show sensors located in room {room} with humidity above {humidity}",
+
+    "list sensors from room {room} where humidity exceeds {humidity}"
+]

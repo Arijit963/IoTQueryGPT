@@ -6,6 +6,9 @@ from generators.numeric import generate_numeric_queries
 from generators.helper import save_dataset
 from generators.categorical import generate_categorical_queries
 from generators.aggregation import generate_aggregation_queries
+from generators.multi_condition import (
+    generate_multi_condition_queries
+)
 
 
 def main():
@@ -61,6 +64,22 @@ def main():
     dataset.extend(aggregation)
 
     print()
+    
+    # =====================================================
+    # Multi condition queries
+    # =====================================================
+    
+    print("=" * 50)
+    print("Generating Multi Condition Queries...")
+    print("=" * 50)
+
+    multi_condition = generate_multi_condition_queries()
+
+    print(f"Generated : {len(multi_condition)}")
+
+    dataset.extend(multi_condition)
+
+    print()
 
     # =====================================================
     # Summary
@@ -73,6 +92,7 @@ def main():
     print(f"Numeric Queries      : {len(numeric)}")
     print(f"Categorical Queries : {len(categorical)}")
     print(f"Aggregation Queries : {len(aggregation)}")
+    print(f"Multi Condition Queries : {len(multi_condition)}")
     print(f"Total Samples       : {len(dataset)}")
 
     print()
