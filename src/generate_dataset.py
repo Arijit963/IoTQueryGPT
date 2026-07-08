@@ -8,6 +8,16 @@ from generators.categorical import generate_categorical_queries
 from generators.aggregation import generate_aggregation_queries
 from generators.sorting import generate_sorting_queries
 from generators.time_queries import generate_time_queries
+from generators.group_by import (
+    generate_group_by_queries
+)
+
+from generators.having import (
+    generate_having_queries
+)
+from generators.between import (
+    generate_between_queries
+)
 from generators.advanced_multi_condition import (
     generate_advanced_multi_condition_queries
 )
@@ -135,7 +145,57 @@ def main():
     dataset.extend(time_queries)
 
     print()
+    
+    # =====================================================
+    # Between Queries
+    # =====================================================
 
+    print("=" * 50)
+    print("Generating Between Queries...")
+    print("=" * 50)
+
+    between = generate_between_queries()
+
+    print(f"Generated : {len(between)}")
+
+    dataset.extend(between)
+
+    print()
+
+    # =====================================================
+    # Group By Queries
+    # =====================================================
+    
+    print("=" * 50)
+    print("Generating GROUP BY Queries...")
+    print("=" * 50)
+
+    group_by = generate_group_by_queries()
+
+    print(f"Generated : {len(group_by)}")
+
+    dataset.extend(group_by)
+
+    print()
+
+
+
+    # =====================================================
+    # Having Queries
+    # =====================================================
+    
+    print("=" * 50)
+    print("Generating HAVING Queries...")
+    print("=" * 50)
+
+    having = generate_having_queries()
+
+    print(f"Generated : {len(having)}")
+
+    dataset.extend(having)
+
+    print()
+    
     # =====================================================
     # Summary
     # =====================================================
@@ -151,6 +211,9 @@ def main():
     print(f"Advanced Multi Condition : {len(advanced_multi)}")
     print(f"Sorting Queries          : {len(sorting)}")
     print(f"Time Queries             : {len(time_queries)}")
+    print(f"BETWEEN Queries         : {len(between)}")
+    print(f"GROUP BY Queries       : {len(group_by)}")
+    print(f"HAVING Queries         : {len(having)}")
     print(f"Total Samples            : {len(dataset)}")
 
     print()

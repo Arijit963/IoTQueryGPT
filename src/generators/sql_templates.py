@@ -159,3 +159,65 @@ def last_week_query():
         "SELECT * FROM devices "
         "WHERE last_connected >= NOW() - INTERVAL 7 DAY;"
     )
+    
+# ==========================================================
+# BETWEEN Queries
+# ==========================================================
+
+def between_query(
+    table,
+    field,
+    lower,
+    upper
+):
+
+    return (
+        f"SELECT * FROM {table} "
+        f"WHERE {field} BETWEEN {lower} AND {upper};"
+    )
+    
+# ==========================================================
+# GROUP BY Queries
+# ==========================================================
+
+def group_by_count(
+    table,
+    group_field
+):
+
+    return (
+        f"SELECT {group_field}, COUNT(*) "
+        f"FROM {table} "
+        f"GROUP BY {group_field};"
+    )
+
+
+def group_by_avg(
+    table,
+    group_field,
+    value_field
+):
+
+    return (
+        f"SELECT {group_field}, AVG({value_field}) "
+        f"FROM {table} "
+        f"GROUP BY {group_field};"
+    )
+
+
+# ==========================================================
+# HAVING Queries
+# ==========================================================
+
+def having_count(
+    table,
+    group_field,
+    threshold
+):
+
+    return (
+        f"SELECT {group_field}, COUNT(*) "
+        f"FROM {table} "
+        f"GROUP BY {group_field} "
+        f"HAVING COUNT(*) > {threshold};"
+    )

@@ -369,3 +369,75 @@ LAST_WEEK_PATTERNS = [
 
     "show devices connected within 7 days"
 ]
+
+# ==========================================================
+# BETWEEN Templates
+# ==========================================================
+
+BETWEEN_PATTERNS = [
+
+    "show {table} with {field} between {lower} and {upper}",
+
+    "find {table} where {field} is between {lower} and {upper}",
+
+    "list {table} having {field} between {lower} and {upper}",
+
+    "return {table} with {field} ranging from {lower} to {upper}",
+
+    "show all {table} whose {field} lies between {lower} and {upper}",
+
+    "identify {table} with {field} between {lower} and {upper}",
+
+    "which {table} have {field} between {lower} and {upper}",
+
+    "give me {table} where {field} is between {lower} and {upper}"
+]
+
+# ==========================================================
+# GROUP BY Templates
+# ==========================================================
+
+GROUP_COUNT_PATTERNS = [
+
+    "count {table} by {field}",
+
+    "show number of {table} per {field}",
+
+    "display count of {table} grouped by {field}",
+
+    "list total {table} by {field}",
+
+    "group {table} by {field} and count them"
+]
+
+
+GROUP_AVG_PATTERNS = [
+
+    "show average {value_field} by {group_field}",
+
+    "display average {value_field} grouped by {group_field}",
+
+    "find average {value_field} for each {group_field}",
+
+    "list average {value_field} per {group_field}",
+
+    "group by {group_field} and calculate average {value_field}"
+]
+
+
+# ==========================================================
+# HAVING Templates
+# ==========================================================
+
+HAVING_PATTERNS = [
+
+    "show {group_field} having more than {threshold} records",
+
+    "find {group_field} with count greater than {threshold}",
+
+    "list {group_field} containing over {threshold} entries",
+
+    "display groups where count exceeds {threshold}",
+
+    "show groups with more than {threshold} records"
+]
