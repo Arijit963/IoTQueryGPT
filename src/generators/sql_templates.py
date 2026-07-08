@@ -124,3 +124,38 @@ def where_and(table, conditions):
     sql += ";"
 
     return sql
+
+# ==========================================================
+# Time Queries
+# ==========================================================
+
+def last_hour_query():
+
+    return (
+        "SELECT * FROM devices "
+        "WHERE last_connected >= NOW() - INTERVAL 1 HOUR;"
+    )
+
+
+def last_day_query():
+
+    return (
+        "SELECT * FROM devices "
+        "WHERE last_connected >= NOW() - INTERVAL 1 DAY;"
+    )
+
+
+def today_query():
+
+    return (
+        "SELECT * FROM devices "
+        "WHERE DATE(last_connected) = CURRENT_DATE;"
+    )
+
+
+def last_week_query():
+
+    return (
+        "SELECT * FROM devices "
+        "WHERE last_connected >= NOW() - INTERVAL 7 DAY;"
+    )

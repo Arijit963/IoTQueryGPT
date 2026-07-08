@@ -310,3 +310,62 @@ ADVANCED_SENSOR_PATTERNS = [
 
     "return sensors in room {room} where humidity > {humidity} and temperature < {temperature}"
 ]
+
+# ==========================================================
+# Time Query Templates
+# ==========================================================
+
+LAST_HOUR_PATTERNS = [
+
+    "show devices connected in the last hour",
+
+    "find devices seen in the past hour",
+
+    "list devices active during the last hour",
+
+    "show recently connected devices",
+
+    "return devices connected within the last hour"
+]
+
+
+LAST_DAY_PATTERNS = [
+
+    "show devices connected in the last 24 hours",
+
+    "find devices active in the past day",
+
+    "list devices seen during the last day",
+
+    "return devices connected within 24 hours",
+
+    "show devices connected recently"
+]
+
+
+TODAY_PATTERNS = [
+
+    "show devices connected today",
+
+    "find devices active today",
+
+    "list today's connected devices",
+
+    "return devices seen today",
+
+    "show all devices connected today"
+]
+
+
+LAST_WEEK_PATTERNS = [
+
+    "show devices connected this week",
+
+    "find devices active this week",
+
+    "list devices seen during the last week",
+
+    "return devices connected in the past week",
+
+    "show devices connected within 7 days"
+]

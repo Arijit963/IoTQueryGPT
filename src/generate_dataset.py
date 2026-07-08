@@ -7,6 +7,7 @@ from generators.helper import save_dataset
 from generators.categorical import generate_categorical_queries
 from generators.aggregation import generate_aggregation_queries
 from generators.sorting import generate_sorting_queries
+from generators.time_queries import generate_time_queries
 from generators.advanced_multi_condition import (
     generate_advanced_multi_condition_queries
 )
@@ -118,6 +119,22 @@ def main():
     dataset.extend(advanced_multi)
 
     print()
+    
+    # =====================================================
+    # Time Queries
+    # =====================================================
+
+    print("=" * 50)
+    print("Generating Time Queries...")
+    print("=" * 50)
+
+    time_queries = generate_time_queries()
+
+    print(f"Generated : {len(time_queries)}")
+
+    dataset.extend(time_queries)
+
+    print()
 
     # =====================================================
     # Summary
@@ -133,6 +150,7 @@ def main():
     print(f"Multi Condition Queries  : {len(multi_condition)}")
     print(f"Advanced Multi Condition : {len(advanced_multi)}")
     print(f"Sorting Queries          : {len(sorting)}")
+    print(f"Time Queries             : {len(time_queries)}")
     print(f"Total Samples            : {len(dataset)}")
 
     print()
